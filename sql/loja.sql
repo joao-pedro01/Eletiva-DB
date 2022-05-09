@@ -70,3 +70,12 @@ ALTER TABLE produto add(
 );
 
 
+CREATE TABLE carrinho(
+	id_venda int,
+    id_produto int,
+    itens_vendidos int,
+   	valor_vendido float(10,2),
+    
+    FOREIGN KEY (id_venda) REFERENCES venda (id),
+    FOREIGN KEY (id_produto) REFERENCES produto (id)
+);
